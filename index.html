@@ -3,27 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="/assets/css/style.css"/>
     <title>DonaEasy!</title>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Sobre Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="navbar-header">
+                <button class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+            <div class="navbar-menu">
+                <ul class="menu-list">
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Acerca De</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
+        <div class="overlay"></div>
     </header>
-    <main>
 
+    <main>
+        <div class="content">
+            <h1> Bienvenidos </h1>
+            <p>Este es el contenido de la página.</p>
+        </div>
     </main>
 
     <footer>
-
+        <div class="container">
+            <p>Derechos de autor © 2024 - Todos los derechos reservados</p>
+        </div>
     </footer>
 
 
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,134 @@
+:root {
+  /* Colores */
+  --primary-color: #715cf8;
+  --secondary-color: #ba6cd6;
+
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+
+  --background-color: #f2f2f2;
+  --text-color: green;
+
+  /* Tipografía */
+  --font-family: Arial, sans-serif;
+  --font-size-base: 18px;
+
+  /* Otros Estilos */
+
+  /* Bordes */
+  --border-test: 3px solid black;
+  --border-width: 1px;
+  --border-radius: 4px;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 60px; /* Altura fija para consistencia */
+}
+
+/* Menu toggle button */
+.navbar-header .menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* Ocultar menú para móvil por defecto */
+.navbar-menu {
+    display: none;
+}
+
+/* Estilos para menú de escritorio */
+@media (min-width: 768px) {
+    .navbar-menu {
+        display: block;
+    }
+
+    .navbar-menu ul {
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        gap: 20px;
+    }
+
+    .navbar-menu li {
+        padding: 0;
+    }
+
+    .navbar-header .menu-toggle {
+        display: none;
+    }
+}
+
+.navbar-menu ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    padding: 10px 20px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para cuando el menú está abierto en móvil */
+.navbar-menu.open {
+    display: block;
+    position: absolute;
+    top: 60px; /* Debajo de la navbar */
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 2;
+}
+
+.navbar-menu.open.show {
+    transform: translateX(0);
+}
+
+.main-open-menu {
+    margin-top: 60px; /* Desplaza el contenido hacia abajo */
+    transition: margin-top 0.3s ease-in-out; /* Aplica una transición suave */
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
