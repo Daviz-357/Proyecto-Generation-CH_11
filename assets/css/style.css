@@ -2,6 +2,8 @@
   /* Colores */
   --primary-color: #715cf8;
   --secondary-color: #ba6cd6;
+  --navbar-color: #22752c;
+  --navbar-color-secondary: #346651;
 
   --color-success: #28a745;
   --color-warning: #ffc107;
@@ -24,16 +26,18 @@
 
 body {
   font-family: var(--font-family);
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
 }
 
 /* Navbar */
+
 .navbar {
-    background-color: #333;
+    background-color: var(--navbar-color);
     color: white;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     width: 100%;
@@ -42,6 +46,12 @@ body {
 }
 
 /* Menu toggle button */
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
 .navbar-header .menu-toggle {
     background: none;
     border: none;
@@ -61,28 +71,6 @@ body {
 /* Ocultar menú para móvil por defecto */
 .navbar-menu {
     display: none;
-}
-
-/* Estilos para menú de escritorio */
-@media (min-width: 768px) {
-    .navbar-menu {
-        display: block;
-    }
-
-    .navbar-menu ul {
-        display: flex;
-        justify-content: flex-end;
-        align-content: center;
-        gap: 20px;
-    }
-
-    .navbar-menu li {
-        padding: 0;
-    }
-
-    .navbar-header .menu-toggle {
-        display: none;
-    }
 }
 
 .navbar-menu ul {
@@ -108,7 +96,7 @@ body {
     top: 60px; /* Debajo de la navbar */
     right: 0;
     width: 100%;
-    background-color: #333;
+    background-color: var(--navbar-color-secondary);
     z-index: 2;
 }
 
@@ -131,4 +119,107 @@ body {
 
 .menu-toggle.open .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/*------------------ Main Section--------------------------- */
+
+main{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero{
+    text-align: center;
+    padding: 50px 0;
+    /* background-color: ; Definir */
+    margin-bottom: 20px;
+}
+
+.hero h1{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p{
+    font-size: 1.2em;
+    color: #555;
+}
+
+.content h2{
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.content p{
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/*------------------ Footer Section--------------------------- */
+
+footer{
+    background-color: var(--navbar-color-secondary);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos responsivos */
+
+/* Dispositivos Moviles */
+@media (max-width: 767px) {
+
+}
+
+
+/* Dispositivos Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* Dispositivos laptop & pantallas medianas */
+@media (min-width: 1025px) and (max-width: 1439px){
+    .navbar-menu {
+        display: block;
+    }
+
+    .navbar-menu ul {
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        gap: 20px;
+    }
+
+    .navbar-menu li {
+        padding: 0;
+    }
+
+    .navbar-header .menu-toggle {
+        display: none;
+    }
+}
+
+/* Dispositivos desktop & TV */
+@media (min-width: 1440px){
+    .navbar-menu {
+        display: block;
+    }
+
+    .navbar-menu ul {
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        gap: 20px;
+    }
+
+    .navbar-menu li {
+        padding: 0;
+    }
+
+    .navbar-header .menu-toggle {
+        display: none;
+    }
+
 }
