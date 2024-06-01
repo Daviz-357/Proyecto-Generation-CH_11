@@ -1,0 +1,12 @@
+/*------------------ Footer Section--------------------------- */
+
+footer {
+  height: 50px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  background-color: var(--navbar-color-secondary);
+  color: #f2f2f2;
+  padding: 20px 0;
+  overflow: hidden;
+}

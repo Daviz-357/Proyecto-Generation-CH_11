@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar</title>
+    <link rel="stylesheet" href="css/estilos-generales.css" />
+    <link rel="stylesheet" href="css/estilos-header.css" />
+    <link rel="stylesheet" href="css/estilos-footer.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <div id="header"></div>
+
+    <!-- Main Section -->
+    <section id="buscar">
+      <h2>Buscar Bancos de Alimentos</h2>
+      <p>
+        Encuentra bancos de alimentos cercanos a tu ubicación o en una ubicación
+        específica.
+      </p>
+      <!-- <form action="/buscar" method="GET"> -->
+        <!-- //Simula la busqueda -->
+      <form id="searchForm">
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ingresa tu ubicación">
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="results">
+            <!-- Aquí se mostrarán los resultados de la búsqueda -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>
