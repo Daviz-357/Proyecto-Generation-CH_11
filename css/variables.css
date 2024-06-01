@@ -1,0 +1,24 @@
+:root {
+  /* Colores */
+  --navbar-color: #22752c;
+  --navbar-color-secondary: #346651;
+
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+
+  --background-color: ;
+  --text-color: #fff;
+
+  /* Tipografía */
+  --font-family: Arial, sans-serif;
+  --font-size-base: 18px;
+  --espaciado: 1rem;
+
+  /* Otros Estilos */
+
+  /* Bordes */
+  --border-test: 3px solid black;
+  --border-width: 1px;
+  --border-radius: 4px;
+}
